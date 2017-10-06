@@ -26,7 +26,7 @@
 
   <script src="https://checkout.stripe.com/checkout.js"></script>
     <%= hidden_field_tag 'stripeToken' %>
-    <%= hidden_field_tag 'amount', 499 %>
+    <%= hidden_field_tag 'amount', 200000 %>
     <%= hidden_field_tag 'stripeEmail' %>
     <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>Buy This!</button>
  <script>
@@ -41,7 +41,7 @@
    document.getElementById('btn-buy').addEventListener('click', function(e){
      handler.open({
        name: 'Learn Rails',
-       description: 'Buy this item for ($4.99)',
+       description: 'Your fuel purchase is $2,000!',
        ammount: document.getElementById("amount").value
      });
      e.preventDefault();
